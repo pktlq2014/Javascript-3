@@ -47,8 +47,11 @@ function checkInputs() {
 }
 
 function setErrorFor(input, message) {
+	// thằng cha lúc này là form-control
 	const formControl = input.parentElement;
+	// những thằng con nào trong thằng cha có class là small
 	const small = formControl.querySelector('small');
+	// .add là add còn .className này là thay thế toàn bộ class
 	formControl.className = 'form-control error';
 	small.innerText = message;
 }
